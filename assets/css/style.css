@@ -1,0 +1,146 @@
+body {
+    background-color: rgb(156, 223, 156);
+    font-family: Helvetica;
+    margin: 0;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+#CalculatorContainer {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 1000px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.calculatorInputs{
+    margin-left: 350px;
+    display: inline;
+}
+
+button.sideButton{
+    float: right;
+    width: 125px;
+}
+
+hr {
+    border-top: 3px solid #bbb;
+    border-radius: 5px;
+    margin: 20px;
+  }
+
+.errorText{
+    color: red;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+  }
+  
+  .overlayHidden {
+      display:none;
+  }
+
+  .popupMenu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 950px;
+    height: auto;
+    background-color: white;
+    padding: 10px;    
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  button.closeButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.mpgMenuInput{
+    margin-left: 300px;
+}
+
+#showMpg{
+    margin-left: 44%;
+}
+
+#mpgLabel
+{
+    padding-right: 24px;
+}
+
+.buttonWrapper{
+    text-align: center;
+    margin: 10px;
+}
+
+#newPrice{
+    width: 96px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    #CalculatorContainer{
+        width: 100%;
+    } 
+    .calculatorInputs{
+        margin-left: 35%;
+    } 
+    .popupMenu{
+        width: 90%;
+    }
+    .mpgMenuInput{
+        margin-left: 25%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .calculatorInputs{
+        margin-left: 20px;
+    } 
+    .mpgMenuInput{
+        margin-left: 20px;
+    }
+    .mpgMenuInputFields{
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    button.sideButton{
+        display: grid;
+        float: none;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+    }
+    #distance{
+        width: 100px;
+    }
+}

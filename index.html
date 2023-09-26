@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fuel Cost Calculator</title>
+        <link rel="icon" type="image/x-icon" href="assets/images/faviconFuelLogo.ico">
+        <link rel="stylesheet" href = "assets/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="assets/javascript/script.js" defer></script>
+    </head>
+    <body>
+        <div class="overlayHidden">
+            <div id="mpgPopup" class="popupMenu">
+                <h2 class="center">Calculate Miles per Gallon</h2>
+                <button class="closeButton" id="closeMpgCalculatorMenu">X</button>
+                <p>Mpg can be calculated by finding out how much fuel you car consumes for a distance traveled.</p>
+                <p>How to find your cars mpg:</p>
+                <ol>
+                    <li>Fully fuel your car and reset your odometer (or record current mileage)</li>
+                    <li>Next time you fuel up, fill the tank fully and record how many liters it took to fill up your car and how many miles you have covered since you last filled up.</li>
+                    <li>Enter fuel amount and distance driven below</li>
+                </ol>
+                <div class="mpgMenuInputs">
+                    <div class="mpgMenuInput">
+                        <label for="distanceDriven">Distance driven: </label>
+                        <input type="text" name="distanceDriven" id="distanceDriven" class="mpgMenuInputFields">
+                        <select name="mpgDistanceUnits" id="mpgDistanceUnits">
+                            <option value="miles">Miles</option>
+                            <option value="kilometers">Kilometers</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div class="mpgMenuInput">
+                        <label for="fuelConsumed">Fuel Consumed: </label>
+                        <input type="text" name="fuelConsumed" id="fuelConsumed" class="mpgMenuInputFields">
+                        <span>Liters</span>
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <h4 id="showMpg">MPG: <span id="calculatedMpg"></span></h4>
+                <div class="buttonWrapper"><button id="inputCalculatedMpg">Input Calculated mpg</button></div>
+            </div>
+        </div>
+        <h1>Fuel Cost Calculator</h1>
+        <p>Use this calculater to find out how much it will cost to drive you car a certain distance.</p>
+        <div id = "CalculatorContainer">
+            <h3>1. Enter fuel Prices</h3>
+            <div id="fuelPriceContainer" class="calculatorInputs">
+                <label for="fuelType">Fuel Type: </label>
+                <select name="fuelType" id="fuelType">
+                    <option value="default" selected disabled hidden>Select Fuel Type</option>
+                    <option value="unleaded">Unleaded</option>
+                    <option value="superUnleaded">Super Unleaded</option>
+                    <option value="diesel">Diesel</option>
+                    <option value="premiumDiesel">Premium Diesel</option>
+                </select>
+                <span> - </span>
+                <span id="fuelPriceDisplay"><span id="fuelPrice"></span>p
+                    <button type="button" id="updateFuelPrice" class="sideButton">Update Fuel Price</button>
+                </span>
+            </div>
+            <div id="updateFuelDisplay" style = 'display: none;'>
+                <input type="text" name="newPrice" id="newPrice" placeholder="Enter new Price">p
+                <button type="button" id="confirmNewFuelPrice">Confirm</button>
+                <button type="button" id="cancelNewFuelPrice" class="sideButton">Cancel</button>
+            </div>
+            <p id="fuelErrorMessage" class="errorText"></p>
+            <hr>
+            <h3>2. Enter Miles Per Gallon (MPG)</h3>
+            <div id="mpgContainer" class="calculatorInputs">
+                <label for="mpg" id="mpgLabel">MPG: </label>
+                
+                <input type="text" name="mgp" id="mpg">
+                <button type="button" id="calculateMpg" class="sideButton">Calculate MPG</button>
+            </div>
+            <p id="mpgErrorMessage" class="errorText"></p>
+            <hr>
+            <h3>3. Enter Distance</h3>
+            <div id="distanceContainer" class="calculatorInputs">
+                <label for="distance">Distance: </label>
+                <input type="text" name="distance" id="distance">
+                <select name="distanceUnits" id="distanceUnits">
+                    <option value="miles">Miles</option>
+                    <option value="kilometers">Kilometers</option>
+                </select>
+            </div>
+            <p id="distanceErrorMessage" class="errorText"></p>
+            <hr>
+            <h3>Results:</h3>
+            <div id="result" class="center">
+                <h4>Cost of trip: £<span id="tripCost">0.00</span></h4>
+                <h4>Cost per mile: <span id="costPerMile">0</span>p per <span id="chosenDistanceUnits">Mile</span></h4>
+                <h4>Total fuel Consumed: <span id="totalFuelConsumed">0</span> Liters</h4>
+            </div>
+        </div>
+    </body>
+</html>
