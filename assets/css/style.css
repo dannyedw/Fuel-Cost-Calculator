@@ -11,6 +11,7 @@ h1 {
 
 p {
     text-align: center;
+    margin: 10px;
 }
 
 #CalculatorContainer {
@@ -104,6 +105,23 @@ hr {
     width: 96px;
 }
 
+#updateFuelDisplay{
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+#result{
+    margin-left: auto;
+    margin-right: auto;
+    width: 230px;
+
+    border-style: solid;
+    border-color: rgb(156, 223, 156);
+    border-radius: 20px;
+    padding: 15px;
+}
+
 
 @media screen and (max-width: 1000px) {
     #CalculatorContainer{
@@ -142,5 +160,9 @@ hr {
     }
     #distance{
         width: 100px;
+    }
+    #updateFuelDisplay{
+        margin: auto;
+        margin-top: 20px;
     }
 }

@@ -22,7 +22,7 @@
                 <div class="mpgMenuInputs">
                     <div class="mpgMenuInput">
                         <label for="distanceDriven">Distance driven: </label>
-                        <input type="text" name="distanceDriven" id="distanceDriven" class="mpgMenuInputFields">
+                        <input type="number" pattern="[0-9]*" name="distanceDriven" id="distanceDriven" class="mpgMenuInputFields">
                         <select name="mpgDistanceUnits" id="mpgDistanceUnits">
                             <option value="miles">Miles</option>
                             <option value="kilometers">Kilometers</option>
@@ -31,7 +31,7 @@
                     <br>
                     <div class="mpgMenuInput">
                         <label for="fuelConsumed">Fuel Consumed: </label>
-                        <input type="text" name="fuelConsumed" id="fuelConsumed" class="mpgMenuInputFields">
+                        <input type="number" pattern="[0-9]*" name="fuelConsumed" id="fuelConsumed" class="mpgMenuInputFields">
                         <span>Liters</span>
                         <br>
                     </div>
@@ -55,12 +55,12 @@
                     <option value="premiumDiesel">Premium Diesel</option>
                 </select>
                 <span> - </span>
-                <span id="fuelPriceDisplay"><span id="fuelPrice"></span>p
-                    <button type="button" id="updateFuelPrice" class="sideButton">Update Fuel Price</button>
-                </span>
+                <span id="fuelPriceDisplay"><span id="fuelPrice"></span>p</span>
             </div>
+
+            <button type="button" id="updateFuelPrice" class="sideButton">Update Fuel Price</button>
             <div id="updateFuelDisplay" style = 'display: none;'>
-                <input type="text" name="newPrice" id="newPrice" placeholder="Enter new Price">p
+                <input type="number" pattern="[0-9]*" name="newPrice" id="newPrice" placeholder="Enter new Price">p
                 <button type="button" id="confirmNewFuelPrice">Confirm</button>
                 <button type="button" id="cancelNewFuelPrice" class="sideButton">Cancel</button>
             </div>
@@ -70,7 +70,7 @@
             <div id="mpgContainer" class="calculatorInputs">
                 <label for="mpg" id="mpgLabel">MPG: </label>
                 
-                <input type="text" name="mgp" id="mpg">
+                <input type="number" pattern="[0-9]*" name="mgp" id="mpg">
                 <button type="button" id="calculateMpg" class="sideButton">Calculate MPG</button>
             </div>
             <p id="mpgErrorMessage" class="errorText"></p>
@@ -78,7 +78,7 @@
             <h3>3. Enter Distance</h3>
             <div id="distanceContainer" class="calculatorInputs">
                 <label for="distance">Distance: </label>
-                <input type="text" name="distance" id="distance">
+                <input type="number" pattern="[0-9]*" name="distance" id="distance">
                 <select name="distanceUnits" id="distanceUnits">
                     <option value="miles">Miles</option>
                     <option value="kilometers">Kilometers</option>
@@ -87,7 +87,7 @@
             <p id="distanceErrorMessage" class="errorText"></p>
             <hr>
             <h3>Results:</h3>
-            <div id="result" class="center">
+            <div id="result">
                 <h4>Cost of trip: £<span id="tripCost">0.00</span></h4>
                 <h4>Cost per mile: <span id="costPerMile">0</span>p per <span id="chosenDistanceUnits">Mile</span></h4>
                 <h4>Total fuel Consumed: <span id="totalFuelConsumed">0</span> Liters</h4>

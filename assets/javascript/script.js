@@ -41,8 +41,8 @@ function showUpdateFuel()
     }
     else
     {
-        document.getElementById('fuelPriceDisplay').style.display = 'none';
-        document.getElementById('updateFuelDisplay').style.display = 'inline';
+        document.getElementById('updateFuelPrice').style.display = 'none';
+        document.getElementById('updateFuelDisplay').style.display = 'block';
     }
 }
 
@@ -73,7 +73,7 @@ function hideUpdateFuel()
 
     document.getElementById("newPrice").value = "";
 
-    document.getElementById('fuelPriceDisplay').style.display = 'inline';
+    document.getElementById('updateFuelPrice').style.display = 'grid';
     document.getElementById('updateFuelDisplay').style.display = 'none';
 }
 
